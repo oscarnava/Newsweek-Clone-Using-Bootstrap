@@ -1,6 +1,17 @@
 @import 'reset.scss';
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
+
+// font: font-style font-variant font-weight font-size/line-height font-family
 
 $main-margin: 15px;
+$headers-font: 'Roboto Condensed', sans-serif;
+$default-font: Arial, Helvetica, sans-serif;
+$default-font-size: 13px;
+
+%default-font {
+  font-family: $default-font;
+  font-size: $default-font-size;
+}
 
 %mark {
   border: 2px dashed rgba(146, 0, 165, 0.5);
@@ -10,7 +21,7 @@ $main-margin: 15px;
 }
 
 body {
-
+  @extend %default-font;
 }
 
 main {
@@ -25,4 +36,27 @@ footer {
 
 div {
   @extend %mark;
+}
+
+h2 {
+  color: rgba(3, 3, 3, .4);
+  font: bold 16px $headers-font;
+  text-transform: uppercase;
+}
+
+#top-story {
+  margin-bottom: 1em;
+
+  img {
+    width: 100%;
+  }
+
+  h3 {
+    font-family: $headers-font;
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+  }
+
+  p {}
 }
