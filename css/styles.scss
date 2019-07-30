@@ -17,6 +17,7 @@ $more-stories-title-font: bold 17px 'Roboto Condensed', sans-serif;
 $featured-stories-title-font: bold 20px 'Roboto Condensed', sans-serif;
 $opinion-title-font: bold 17px 'Roboto Condensed', sans-serif;
 $opinion-author-font: bold 14px 'Roboto Condensed', sans-serif;
+$sponsored-title-font: bold 20px 'Roboto Condensed', sans-serif;
 $mid-sign-up-title-font: bold 19px 'Roboto Condensed', sans-serif;
 
 %default-font {
@@ -253,53 +254,69 @@ h2 {
 
 }
 
-#mid-sign-up {
-  background-color: #f4f5f6;
+#sponsored {
 
-  $logo-size: 28px;
-
-  color: #333;
-  border: thin solid rgba(128, 128, 128, 0.25);
-  font: $mid-sign-up-title-font;
-  text-transform: uppercase;
-  margin: 0px 76px 30px;
-  padding: 20px;
-  display: grid;
-  grid-template-areas:
-    "logo head"
-    "sign sign"
-    "pref pref"    ;
-  grid-template-columns: ($logo-size + 10) 1fr;
-  grid-template-rows: auto 1fr auto;
-//  grid-gap: 8px;
+  margin-bottom: 2em;
 
   h3 {
-    grid-area: head;
+    font: $sponsored-title-font;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    padding: .5em 0;
   }
 
-  .logo {
-    grid-area: logo;
-    width: $logo-size;
-    height: $logo-size;
-    background-color: $newsweek-red;
-    background-image: url(../img/logo-n1.svg);
-    align-self: center;
+  p {
+    padding: .5em 0;
   }
 
-  .signup {
-    grid-area: sign;
-    padding: 20px 0;
+  .sign-up {
+    background-color: #f4f5f6;
 
-    a {
-      padding: 10px;
-      color: white;
-      background-color: #666;
+    $logo-size: 28px;
+
+    color: #333;
+    border: thin solid rgba(128, 128, 128, 0.25);
+    font: $mid-sign-up-title-font;
+    text-transform: uppercase;
+    margin: 20px 76px 30px;
+    padding: 20px;
+    display: grid;
+    grid-template-areas:
+      "logo head"
+      "sign sign"
+      "pref pref"    ;
+    grid-template-columns: ($logo-size + 10) 1fr;
+    grid-template-rows: auto 1fr auto;
+  //  grid-gap: 8px;
+
+    h3 {
+      grid-area: head;
     }
-  }
 
-  a.prefs {
-    grid-area: pref;
-    font: bold 15px 'Roboto Condensed', sans-serif;
-    text-transform: none;
+    .logo {
+      grid-area: logo;
+      width: $logo-size;
+      height: $logo-size;
+      background-color: $newsweek-red;
+      background-image: url(../img/logo-n1.svg);
+      align-self: center;
+    }
+
+    .signup {
+      grid-area: sign;
+      padding: 20px 0;
+
+      a {
+        color: white;
+        background-color: #666;
+      }
+    }
+
+    a.prefs {
+      grid-area: pref;
+      font: bold 15px 'Roboto Condensed', sans-serif;
+      text-transform: none;
+    }
   }
 }
