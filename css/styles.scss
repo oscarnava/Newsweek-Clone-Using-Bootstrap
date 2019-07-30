@@ -1,16 +1,23 @@
 @import 'reset.scss';
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
 
 // font: font-style font-variant font-weight font-size/line-height font-family
 
 $main-margin: 15px;
-$headers-font: 'Roboto Condensed', sans-serif;
-$default-font: Arial, Helvetica, sans-serif;
-$default-font-size: 13px;
+$newsweek-red: #f72210;
+
+$default-font: 13px Arial, Helvetica, sans-serif;
+
+$corner-box-font: bold 17px 'Roboto Condensed', sans-serif;
+$top-story-title-font: 17px 'Roboto Condensed', sans-serif;
+$culture-font: Helvetica, Arial, sans-serif;
+$culture-title-font: 20px Lora, serif;
+$more-stories-title-font: bold 17px 'Roboto Condensed', sans-serif;
+$featured-stories-title-font: bold 20px 'Roboto Condensed', sans-serif;
 
 %default-font {
-  font-family: $default-font;
-  font-size: $default-font-size;
+  font: $default-font;
 }
 
 %mark {
@@ -24,6 +31,12 @@ body {
   @extend %default-font;
 }
 
+nav {
+  height: 50px;
+  color: white;
+  background-color: $newsweek-red;
+}
+
 main {
   margin-left: $main-margin;
   margin-right: $main-margin;
@@ -34,29 +47,133 @@ footer {
   margin: $main-margin;
 }
 
-div {
-  @extend %mark;
-}
+//div,
+//#top-story,
+//#culture-and-travel
+//{ @extend %mark; }
 
 h2 {
   color: rgba(3, 3, 3, .4);
-  font: bold 16px $headers-font;
+  font: bold 16px 'Roboto Condensed', sans-serif;
   text-transform: uppercase;
+  padding-bottom: .5em;
+}
+
+.nw-logo {
+  display: block;
+  background-image: url(../img/logo.svg);
+  fill: white;
+  width: 132px;
+  height: 20px;
+}
+
+.image-with-cornerbox {
+  position: relative;
+  width: 100%;
+
+  img {
+    width: 100%;
+  }
+
+  a.cornerbox {
+    bottom: 0px;
+    left: 0px;
+    color: $newsweek-red;
+    font: $corner-box-font;
+    background-color: rgba(255,255,255,.9);
+    padding: 8px 15px 9px;
+    position: absolute;
+    text-transform: uppercase;
+  }
 }
 
 #top-story {
-  margin-bottom: 1em;
+  margin-bottom: 2em;
+
+  h3 {
+    font-family: $top-story-title-font;
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+    padding: .5em 0;
+  }
+
+  p {
+    padding: .5em 0;
+  }
+}
+
+#culture-and-travel {
+
+  & > div {
+    margin-bottom: 2em;
+  }
 
   img {
     width: 100%;
   }
 
   h3 {
-    font-family: $headers-font;
-    font-size: 22px;
-    font-weight: bold;
     color: black;
+    font: $culture-title-font;
+    padding: .5em 1em;
   }
 
-  p {}
+  p {
+    color: rgba(39,39,39,.5);
+    font-family: $culture-font;
+    font-size: 15px;
+    padding: .5em 1em;
+  }
+
+  .btn {
+    font: $default-font;
+    background-color: #c2d4d7;
+    padding: 0px 6px;
+    margin: 0px 9px 6px 1em;
+  }
+
+}
+
+#more-stories {
+
+  & > div {
+    border-top: thin solid rgba(128, 128, 128, 0.4);
+    padding-top: 1em;
+    margin-bottom: 2em;
+  }
+
+  img {
+    width: 55%;
+    float: left;
+    margin: 0 10px 5px 0;
+  }
+
+  h3 {
+    color: black;
+    font: $more-stories-title-font;
+  }
+
+  p {
+    color: rgba(39,39,39,.5);
+    font: $default-font;
+    padding: .5em 1em;
+  }
+
+}
+
+#featured-stories {
+  margin-bottom: 2em;
+
+  h3 {
+    font: $featured-stories-title-font;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    padding: .5em 0;
+  }
+
+  p {
+    padding: .5em 0;
+  }
 }
