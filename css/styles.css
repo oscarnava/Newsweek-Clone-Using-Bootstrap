@@ -57,6 +57,10 @@ footer {
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJyB3aWR0aD0nNicgaGVpZ2h0PSc2Jz4KICA8cmVjdCB3aWR0aD0nNicgaGVpZ2h0PSc2JyBmaWxsPScjZWVlZWVlJy8+CiAgPGcgaWQ9J2MnPgogICAgPHJlY3Qgd2lkdGg9JzMnIGhlaWdodD0nMycgZmlsbD0nI2U2ZTZlNicvPgogICAgPHJlY3QgeT0nMScgd2lkdGg9JzMnIGhlaWdodD0nMicgZmlsbD0nI2Q4ZDhkOCcvPgogIDwvZz4KICA8dXNlIHhsaW5rOmhyZWY9JyNjJyB4PSczJyB5PSczJy8+Cjwvc3ZnPg==");
   background-repeat: repeat; }
 
+a {
+  color: inherit;
+  text-decoration: none; }
+
 nav {
   height: 50px;
   color: white;
@@ -153,3 +157,78 @@ h2 {
     padding: .5em 0; }
   #featured-stories p {
     padding: .5em 0; }
+
+#opinion > div {
+  display: grid;
+  grid-template-areas: "photo header" "photo author";
+  grid-template-columns: 73px 1fr;
+  grid-template-rows: auto auto;
+  border-bottom: thin solid rgba(128, 128, 128, 0.29);
+  padding-bottom: .5em;
+  margin-bottom: .5em; }
+#opinion img {
+  grid-area: photo;
+  align-self: center; }
+#opinion h3 {
+  grid-area: header;
+  font: bold 17px "Roboto Condensed", sans-serif;
+  color: black;
+  margin-bottom: .5em; }
+#opinion h4 {
+  grid-area: author;
+  font: bold 14px "Roboto Condensed", sans-serif;
+  color: #555;
+  text-transform: uppercase;
+  margin-bottom: .5em; }
+
+#latest-news > div {
+  display: grid;
+  grid-template-areas: "photo header";
+  grid-template-columns: 268px 1fr;
+  grid-template-rows: auto;
+  border-bottom: thin solid rgba(128, 128, 128, 0.29);
+  padding-bottom: .7em;
+  margin-bottom: .7em; }
+#latest-news img {
+  grid-area: photo;
+  align-self: center;
+  width: 258px;
+  height: 172px; }
+#latest-news h3 {
+  grid-area: header;
+  font: bold 17px "Roboto Condensed", sans-serif;
+  color: black;
+  margin-bottom: .5em; }
+
+#mid-sign-up {
+  background-color: #f4f5f6;
+  color: #333;
+  border: thin solid rgba(128, 128, 128, 0.25);
+  font: bold 19px "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
+  margin: 0px 76px 30px;
+  padding: 20px;
+  display: grid;
+  grid-template-areas: "logo head" "sign sign" "pref pref";
+  grid-template-columns: 38px 1fr;
+  grid-template-rows: auto 1fr auto; }
+  #mid-sign-up h3 {
+    grid-area: head; }
+  #mid-sign-up .logo {
+    grid-area: logo;
+    width: 28px;
+    height: 28px;
+    background-color: #f72210;
+    background-image: url(../img/logo-n1.svg);
+    align-self: center; }
+  #mid-sign-up .signup {
+    grid-area: sign;
+    padding: 20px 0; }
+    #mid-sign-up .signup a {
+      padding: 10px;
+      color: white;
+      background-color: #666; }
+  #mid-sign-up a.prefs {
+    grid-area: pref;
+    font: bold 15px 'Roboto Condensed', sans-serif;
+    text-transform: none; }
