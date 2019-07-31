@@ -12,7 +12,7 @@ $default-font: 13px Arial, Helvetica, sans-serif;
 $corner-box-font: bold 17px 'Roboto Condensed', sans-serif;
 $top-story-title-font: 17px 'Roboto Condensed', sans-serif;
 $culture-font: Helvetica, Arial, sans-serif;
-$culture-title-font: 20px Lora, serif;
+$culture-title-font: 18px "Lora", serif;
 $more-stories-title-font: bold 17px 'Roboto Condensed', sans-serif;
 $featured-stories-title-font: bold 20px 'Roboto Condensed', sans-serif;
 $opinion-title-font: bold 17px 'Roboto Condensed', sans-serif;
@@ -114,8 +114,8 @@ h2 {
 
 #culture-and-travel {
 
-  & > div {
-    margin-bottom: 2em;
+  div.cultr {
+    padding-bottom: 2em;
   }
 
   img {
@@ -126,6 +126,7 @@ h2 {
     color: black;
     font: $culture-title-font;
     padding: .5em 1em;
+    line-height: 1.1em;
   }
 
   p {
@@ -133,6 +134,7 @@ h2 {
     font-family: $culture-font;
     font-size: 15px;
     padding: .5em 1em;
+    line-height: 1.2em;
   }
 
   .btn {
@@ -141,7 +143,6 @@ h2 {
     padding: 0px 6px;
     margin: 0px 9px 6px 1em;
   }
-
 }
 
 #more-stories {
@@ -169,6 +170,18 @@ h2 {
     padding: .5em 1em;
   }
 
+  @media (max-width: 767px) and (min-width: 481px) {
+    img {
+      width: 258px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    img {
+      width: 135px;
+      height: 90px;
+    }
+  }
 }
 
 #featured-stories {
@@ -252,22 +265,40 @@ h2 {
     margin-bottom: .5em;
   }
 
+  @media screen and (min-width: 768px) {
+    $image-width: 135px;
+    $image-height: $image-width * 2 / 3;
+
+    & > div {
+      grid-template-columns: ($image-width + 10) 1fr;
+    }
+
+    img {
+      width: $image-width;
+      height: $image-height;
+    }
+  }
+
 }
 
 #sponsored {
-
   margin-bottom: 2em;
+
+  & > div {
+    border: thin solid rgba(128, 128, 128, 0.24);
+  }
 
   h3 {
     font: $sponsored-title-font;
     font-size: 20px;
     font-weight: bold;
     color: black;
-    padding: .5em 0;
+    padding: .5em 1em;
   }
 
   p {
-    padding: .5em 0;
+    padding: .5em 20px 20px;
+    font-size: 1.1em;
   }
 
   .sign-up {
@@ -276,7 +307,6 @@ h2 {
     $logo-size: 28px;
 
     color: #333;
-    border: thin solid rgba(128, 128, 128, 0.25);
     font: $mid-sign-up-title-font;
     text-transform: uppercase;
     margin: 20px 76px 30px;
