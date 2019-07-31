@@ -6,19 +6,22 @@
 
 $main-margin: 15px;
 $newsweek-red: #f72210;
+$small-logo-size: 28px;
 
 $default-font: 13px Arial, Helvetica, sans-serif;
 
-$corner-box-font: bold 17px 'Roboto Condensed', sans-serif;
-$top-story-title-font: 17px 'Roboto Condensed', sans-serif;
+$titles-font-family: 'Roboto Condensed', sans-serif;
+$corner-box-font: bold 17px $titles-font-family;
+$top-story-title-font: 17px $titles-font-family;
 $culture-font: Helvetica, Arial, sans-serif;
 $culture-title-font: 18px "Lora", serif;
-$more-stories-title-font: bold 17px 'Roboto Condensed', sans-serif;
-$featured-stories-title-font: bold 20px 'Roboto Condensed', sans-serif;
-$opinion-title-font: bold 17px 'Roboto Condensed', sans-serif;
-$opinion-author-font: bold 14px 'Roboto Condensed', sans-serif;
-$sponsored-title-font: bold 20px 'Roboto Condensed', sans-serif;
-$mid-sign-up-title-font: bold 19px 'Roboto Condensed', sans-serif;
+$more-stories-title-font: bold 17px $titles-font-family;
+$featured-stories-title-font: bold 20px $titles-font-family;
+$opinion-title-font: bold 17px $titles-font-family;
+$opinion-author-font: bold 14px $titles-font-family;
+$sponsored-title-font: bold 20px $titles-font-family;
+$mid-sign-up-title-font: bold 19px $titles-font-family;
+$features-title-font: bold 20px $titles-font-family;
 
 %default-font {
   font: $default-font;
@@ -29,6 +32,7 @@ $mid-sign-up-title-font: bold 19px 'Roboto Condensed', sans-serif;
   background-color: rgba(146, 0, 165, 0.15);
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJyB3aWR0aD0nNicgaGVpZ2h0PSc2Jz4KICA8cmVjdCB3aWR0aD0nNicgaGVpZ2h0PSc2JyBmaWxsPScjZWVlZWVlJy8+CiAgPGcgaWQ9J2MnPgogICAgPHJlY3Qgd2lkdGg9JzMnIGhlaWdodD0nMycgZmlsbD0nI2U2ZTZlNicvPgogICAgPHJlY3QgeT0nMScgd2lkdGg9JzMnIGhlaWdodD0nMicgZmlsbD0nI2Q4ZDhkOCcvPgogIDwvZz4KICA8dXNlIHhsaW5rOmhyZWY9JyNjJyB4PSczJyB5PSczJy8+Cjwvc3ZnPg==");
   background-repeat: repeat;
+  min-height: 50px;
 }
 
 body {
@@ -63,7 +67,7 @@ footer {
 
 h2 {
   color: rgba(3, 3, 3, .4);
-  font: bold 16px 'Roboto Condensed', sans-serif;
+  font: bold 16px $titles-font-family;
   text-transform: uppercase;
   padding-bottom: .5em;
 }
@@ -74,6 +78,14 @@ h2 {
   fill: white;
   width: 132px;
   height: 20px;
+}
+
+.nw-logo-small {
+  display: inline-block;
+  width: $small-logo-size;
+  height: $small-logo-size;
+  background-color: $newsweek-red;
+  background-image: url(../img/logo-n1.svg);
 }
 
 .image-with-cornerbox {
@@ -304,9 +316,6 @@ h2 {
 
   .signup {
     background-color: #f4f5f6;
-
-    $logo-size: 28px;
-
     color: #333;
     font: $mid-sign-up-title-font;
     text-transform: uppercase;
@@ -316,7 +325,7 @@ h2 {
       "logo head"
       "sign sign"
       "pref pref"    ;
-    grid-template-columns: ($logo-size + 10) 1fr;
+    grid-template-columns: ($small-logo-size + 10) 1fr;
     grid-template-rows: auto 1fr auto;
   //  grid-gap: 8px;
 
@@ -326,10 +335,6 @@ h2 {
 
     .logo {
       grid-area: logo;
-      width: $logo-size;
-      height: $logo-size;
-      background-color: $newsweek-red;
-      background-image: url(../img/logo-n1.svg);
       align-self: center;
     }
 
@@ -349,4 +354,83 @@ h2 {
       text-transform: none;
     }
   }
+}
+
+#features {
+
+  $box-height: 26px;
+  $left-size: 60%;
+
+  h2 {
+    font-size: 19px;
+    color: black;
+    text-align: center;
+    line-height: $small-logo-size + 10px;
+    margin-left: 25%;
+    border-bottom: thin solid rgba(128, 128, 128, 0.29);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+
+    .logo {
+      margin-bottom: -8px;
+      margin-right: 8px;
+    }
+  }
+
+  .see-all {
+    display: inline-block;
+    font: bold 18px $titles-font-family;
+    text-transform: uppercase;
+    padding: 10px 0px;
+    width: 100%;
+  }
+
+  .feature {
+//    @extend %mark;
+    display: grid;
+    grid-template-areas:
+      "image   image"
+      "feature section"
+      "header  header";
+    grid-template-columns: auto 1fr;
+    grid-template-rows: repeat(3,auto);
+    padding-bottom: 2em;
+
+    .image {
+      grid-area: image;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .title {
+      grid-area: header;
+      font: $features-title-font;
+    }
+
+    .lt-box {
+      grid-area: feature;
+      height: $box-height;
+      font-size: $box-height - 10px;
+      font-weight: bold;
+      text-transform: uppercase;
+      background-color: $newsweek-red;
+      color: white;
+      padding: 5px 7px;
+    }
+
+    .rt-box {
+      grid-area: section;
+      height: $box-height;
+      font-size: $box-height - 10px;
+      font-weight: bold;
+      text-transform: uppercase;
+      background-color: #f4f5f6;
+      color: $newsweek-red;
+      padding: 5px 7px;
+    }
+
+  }
+
 }

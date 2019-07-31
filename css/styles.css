@@ -55,7 +55,8 @@ footer {
   border: 2px dashed rgba(146, 0, 165, 0.5);
   background-color: rgba(146, 0, 165, 0.15);
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJyB3aWR0aD0nNicgaGVpZ2h0PSc2Jz4KICA8cmVjdCB3aWR0aD0nNicgaGVpZ2h0PSc2JyBmaWxsPScjZWVlZWVlJy8+CiAgPGcgaWQ9J2MnPgogICAgPHJlY3Qgd2lkdGg9JzMnIGhlaWdodD0nMycgZmlsbD0nI2U2ZTZlNicvPgogICAgPHJlY3QgeT0nMScgd2lkdGg9JzMnIGhlaWdodD0nMicgZmlsbD0nI2Q4ZDhkOCcvPgogIDwvZz4KICA8dXNlIHhsaW5rOmhyZWY9JyNjJyB4PSczJyB5PSczJy8+Cjwvc3ZnPg==");
-  background-repeat: repeat; }
+  background-repeat: repeat;
+  min-height: 50px; }
 
 a {
   color: inherit;
@@ -71,7 +72,7 @@ footer {
 
 h2 {
   color: rgba(3, 3, 3, 0.4);
-  font: bold 16px 'Roboto Condensed', sans-serif;
+  font: bold 16px "Roboto Condensed", sans-serif;
   text-transform: uppercase;
   padding-bottom: .5em; }
 
@@ -81,6 +82,13 @@ h2 {
   fill: white;
   width: 132px;
   height: 20px; }
+
+.nw-logo-small {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background-color: #f72210;
+  background-image: url(../img/logo-n1.svg); }
 
 .image-with-cornerbox {
   position: relative;
@@ -239,10 +247,6 @@ h2 {
       grid-area: head; }
     #sponsored .signup .logo {
       grid-area: logo;
-      width: 28px;
-      height: 28px;
-      background-color: #f72210;
-      background-image: url(../img/logo-n1.svg);
       align-self: center; }
     #sponsored .signup .signup-button {
       grid-area: sign;
@@ -254,3 +258,53 @@ h2 {
       grid-area: pref;
       font: bold 15px 'Roboto Condensed', sans-serif;
       text-transform: none; }
+
+#features h2 {
+  font-size: 19px;
+  color: black;
+  text-align: center;
+  line-height: 38px;
+  margin-left: 25%;
+  border-bottom: thin solid rgba(128, 128, 128, 0.29);
+  padding-bottom: 5px;
+  margin-bottom: 10px; }
+  #features h2 .logo {
+    margin-bottom: -8px;
+    margin-right: 8px; }
+#features .see-all {
+  display: inline-block;
+  font: bold 18px "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
+  padding: 10px 0px;
+  width: 100%; }
+#features .feature {
+  display: grid;
+  grid-template-areas: "image   image" "feature section" "header  header";
+  grid-template-columns: auto 1fr;
+  grid-template-rows: repeat(3, auto);
+  padding-bottom: 2em; }
+  #features .feature .image {
+    grid-area: image; }
+  #features .feature img {
+    width: 100%; }
+  #features .feature .title {
+    grid-area: header;
+    font: bold 20px "Roboto Condensed", sans-serif; }
+  #features .feature .lt-box {
+    grid-area: feature;
+    height: 26px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #f72210;
+    color: white;
+    padding: 5px 7px; }
+  #features .feature .rt-box {
+    grid-area: section;
+    height: 26px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #f4f5f6;
+    color: #f72210;
+    padding: 5px 7px; }
