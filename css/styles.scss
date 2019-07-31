@@ -47,8 +47,8 @@ nav {
 }
 
 main {
-  margin-left: $main-margin;
-  margin-right: $main-margin;
+//  margin-left: $main-margin;
+//  margin-right: $main-margin;
 }
 
 footer {
@@ -148,6 +148,7 @@ h2 {
 #more-stories {
 
   & > div {
+    clear: both;
     border-top: thin solid rgba(128, 128, 128, 0.4);
     padding-top: 1em;
     margin-bottom: 2em;
@@ -301,7 +302,7 @@ h2 {
     font-size: 1.1em;
   }
 
-  .sign-up {
+  .signup {
     background-color: #f4f5f6;
 
     $logo-size: 28px;
@@ -309,7 +310,6 @@ h2 {
     color: #333;
     font: $mid-sign-up-title-font;
     text-transform: uppercase;
-    margin: 20px 76px 30px;
     padding: 20px;
     display: grid;
     grid-template-areas:
@@ -333,7 +333,7 @@ h2 {
       align-self: center;
     }
 
-    .signup {
+    .signup-button {
       grid-area: sign;
       padding: 20px 0;
 
