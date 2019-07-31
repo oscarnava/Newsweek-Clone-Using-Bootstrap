@@ -105,6 +105,21 @@ h2 {
     position: absolute;
     text-transform: uppercase; }
 
+.slideshow-image {
+  position: relative;
+  width: 100%; }
+  .slideshow-image img {
+    width: 100%; }
+  .slideshow-image a.cornerbox {
+    bottom: 0px;
+    left: 0px;
+    color: #f72210;
+    font: bold 17px "Roboto Condensed", sans-serif;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 8px 15px 9px;
+    position: absolute;
+    text-transform: uppercase; }
+
 #top-story {
   margin-bottom: 2em; }
   #top-story h3 {
@@ -308,3 +323,27 @@ h2 {
     background-color: #f4f5f6;
     color: #f72210;
     padding: 5px 7px; }
+
+#editors-pick {
+  margin-bottom: 2em; }
+  #editors-pick h2 {
+    font-size: 19px;
+    color: black;
+    text-align: center;
+    line-height: 38px;
+    border-bottom: thin solid rgba(128, 128, 128, 0.29);
+    padding-bottom: 5px;
+    margin: 0px 15px 15px; }
+    #editors-pick h2 .logo {
+      margin-bottom: -8px;
+      margin-right: 8px; }
+  #editors-pick h3 {
+    font: bold 24px "Roboto Condensed", sans-serif;
+    font-weight: bold;
+    color: black;
+    padding: 7px 0;
+    line-height: 1em; }
+  #editors-pick p {
+    padding: 7px 0;
+    font-size: 15px;
+    margin-bottom: 15px; }

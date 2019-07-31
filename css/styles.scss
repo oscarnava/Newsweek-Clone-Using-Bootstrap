@@ -22,6 +22,7 @@ $opinion-author-font: bold 14px $titles-font-family;
 $sponsored-title-font: bold 20px $titles-font-family;
 $mid-sign-up-title-font: bold 19px $titles-font-family;
 $features-title-font: bold 20px $titles-font-family;
+$editors-pick-title-font: bold 24px $titles-font-family;
 
 %default-font {
   font: $default-font;
@@ -60,11 +61,6 @@ footer {
   margin: $main-margin;
 }
 
-//div,
-//#top-story,
-//#culture-and-travel
-//{ @extend %mark; }
-
 h2 {
   color: rgba(3, 3, 3, .4);
   font: bold 16px $titles-font-family;
@@ -89,6 +85,26 @@ h2 {
 }
 
 .image-with-cornerbox {
+  position: relative;
+  width: 100%;
+
+  img {
+    width: 100%;
+  }
+
+  a.cornerbox {
+    bottom: 0px;
+    left: 0px;
+    color: $newsweek-red;
+    font: $corner-box-font;
+    background-color: rgba(255,255,255,.9);
+    padding: 8px 15px 9px;
+    position: absolute;
+    text-transform: uppercase;
+  }
+}
+
+.slideshow-image {
   position: relative;
   width: 100%;
 
@@ -430,7 +446,42 @@ h2 {
       color: $newsweek-red;
       padding: 5px 7px;
     }
-
   }
+}
+
+#editors-pick {
+  margin-bottom: 2em;
+
+  h2 {
+    font-size: 19px;
+    color: black;
+    text-align: center;
+    line-height: $small-logo-size + 10px;
+    border-bottom: thin solid rgba(128, 128, 128, 0.29);
+    padding-bottom: 5px;
+    margin: 0px 15px 15px;
+
+    .logo {
+      margin-bottom: -8px;
+      margin-right: 8px;
+    }
+  }
+
+  h3 {
+    font: $editors-pick-title-font;
+    font-weight: bold;
+    color: black;
+    padding: 7px 0;
+    line-height: 1em;
+  }
+
+  p {
+    padding: 7px 0;
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+#slideshows {
 
 }
