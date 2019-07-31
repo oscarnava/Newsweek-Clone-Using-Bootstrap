@@ -110,15 +110,23 @@ h2 {
   width: 100%; }
   .slideshow-image img {
     width: 100%; }
-  .slideshow-image a.cornerbox {
+  .slideshow-image a.count {
+    display: inline-block;
+    width: 70px;
+    height: 52px;
     bottom: 0px;
     left: 0px;
     color: #f72210;
     font: bold 17px "Roboto Condensed", sans-serif;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 8px 15px 9px;
+    background-image: url(../img/icon-slideshows.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 20px 0px 0px 5px;
     position: absolute;
+    text-align: center;
     text-transform: uppercase; }
+  .slideshow-image a:hover {
+    text-decoration: none; }
 
 #top-story {
   margin-bottom: 2em; }
@@ -347,3 +355,21 @@ h2 {
     padding: 7px 0;
     font-size: 15px;
     margin-bottom: 15px; }
+
+#slideshows h2 {
+  font-size: 19px;
+  color: black;
+  text-align: center;
+  line-height: 38px;
+  border-bottom: thin solid rgba(128, 128, 128, 0.29);
+  padding-bottom: 5px;
+  margin: 0px 15px 15px; }
+  #slideshows h2 .logo {
+    margin-bottom: -8px;
+    margin-right: 8px; }
+#slideshows .row > div {
+  padding: 0px 15px 40px; }
+  #slideshows .row > div h3 {
+    font: bold 22px "Roboto Condensed", sans-serif;
+    padding-top: 20px;
+    margin-bottom: 10px; }
