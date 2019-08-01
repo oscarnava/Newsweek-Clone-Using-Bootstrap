@@ -27,6 +27,8 @@ $slideshow-title-font: bold 22px $titles-font-family;
 $section-pick-title-font: bold 22px $titles-font-family;
 $section-pick-big-section-font: bold 22px $titles-font-family;
 $section-pick-small-section-font: bold 17px $titles-font-family;
+$subscribe-title-font: bold 24px $titles-font-family;
+$newsletter-title-font: bold 24px $titles-font-family;
 
 %default-font {
   font: $default-font;
@@ -570,11 +572,117 @@ h2 {
       grid-area: image;
       width: 135px;
       height: 90px;
+      @media screen and(max-width:768px) {
+        width: 258px;
+        height: 172px;
+      }
     }
 
     h3 {
       grid-area: header;
       font: $section-pick-small-section-font;
+    }
+  }
+}
+
+.red-btn {
+  background-color: $newsweek-red;
+  color: white;
+  font: bold 18px $titles-font-family;
+}
+
+#bottom-sign-up {
+  padding-top: 40px;
+
+  h2 {
+    grid-area: header;
+    color: $newsweek-red;
+  }
+
+  & > div {
+    padding: 30px;
+
+    .covers {
+      position: relative;
+      width: 260px;
+      height: 260px;
+      margin: auto;
+
+      img {
+        width: 170px;
+        height: 227px;
+        position: absolute;
+        right: 0px;
+        bottom: 15px;
+      }
+
+      img:first-child {
+        left: 0px;
+        top: 0px;
+        right: auto;
+        bottom: auto;
+      }
+    }
+  }
+
+  .text {
+    align-self: center;
+    @media screen and(max-width:768px) {
+      text-align: center;
+    }
+
+    h3 {
+      font: $subscribe-title-font;
+      margin-bottom: 15px;
+      @media screen and(max-width:768px) {
+        font-size: 20px;
+      }
+    }
+
+    p {
+      font-size: 15px;
+      margin-bottom: 25px;
+    }
+  }
+}
+
+#newsletter {
+
+  h2 {
+    color: $newsweek-red;
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/subscribe-img2.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    @media screen and(max-width:768px) {
+      height: 160px;
+    }
+  }
+
+  .text {
+    padding: 20px;
+    align-self: center;
+    @media screen and(max-width:768px) {
+      text-align: center;
+    }
+
+    h3 {
+      font: $subscribe-title-font;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 15px;
+      margin-bottom: 25px;
+    }
+
+    a {
+
     }
   }
 }
