@@ -304,7 +304,7 @@ h2 {
   display: grid;
   grid-template-areas: "image   image" "feature section" "header  header";
   grid-template-columns: auto 1fr;
-  grid-template-rows: repeat(3, auto);
+  grid-template-rows: 1fr 26px auto;
   padding-bottom: 2em; }
   #features .feature .image {
     grid-area: image; }
