@@ -181,6 +181,14 @@ h2 {
 
 #featured-stories {
   margin-bottom: 2em; }
+  @media screen and (min-width: 768.5px) {
+    #featured-stories {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      padding: 0px 15px; } }
   #featured-stories h3 {
     font: bold 20px "Roboto Condensed", sans-serif;
     font-size: 20px;
@@ -189,6 +197,9 @@ h2 {
     padding: .5em 0; }
   #featured-stories p {
     padding: .5em 0; }
+  #featured-stories .sticky-panel {
+    position: sticky;
+    top: 0px; }
 
 #opinion > div {
   display: grid;
