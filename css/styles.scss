@@ -55,16 +55,18 @@ nav {
   height: 50px;
   color: white;
   background-color: $newsweek-red;
+
+  .nw-logo {
+    width: 236px;
+    height: 35px;
+    margin: 8px 8px;
+  }
+
 }
 
 main {
 //  margin-left: $main-margin;
 //  margin-right: $main-margin;
-}
-
-footer {
-  @extend %mark;
-  margin: $main-margin;
 }
 
 h2 {
@@ -75,11 +77,14 @@ h2 {
 }
 
 .nw-logo {
-  display: block;
-  background-image: url(../img/logo.svg);
-  fill: white;
-  width: 132px;
-  height: 20px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  &.white {
+    background-image: url(../img/logo-white.svg);
+  }
+  &.red {
+    background-image: url(../img/logo-red.svg);
+  }
 }
 
 .nw-logo-small {
@@ -589,6 +594,11 @@ h2 {
   background-color: $newsweek-red;
   color: white;
   font: bold 18px $titles-font-family;
+  text-decoration: none;
+  &:hover {
+    background-color: rgb(198, 22, 6);
+    color: white;
+  }
 }
 
 #bottom-sign-up {
@@ -683,6 +693,79 @@ h2 {
 
     a {
 
+    }
+  }
+}
+
+footer {
+//  @extend %mark;
+  margin: $main-margin;
+
+  .top {
+    font-size: 12px;
+    color: #666;
+    line-height: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid rgba(128, 128, 128, 0.25);
+
+    div:last-child {
+      text-align: left;
+      @media screen and(max-width:768px) {
+        text-align: left;
+      }
+    }
+  }
+
+  .bottom {
+
+    div:last-child {
+      text-align: center;
+      @media screen and(max-width:1024px) {
+        text-align: left;
+      }
+    }
+
+    p {
+      display: inline-block;
+      font-weight: bold;
+      color: #555;
+      margin-right: 10px;
+    }
+  }
+
+  .nw-logo {
+    width: 236px;
+    height: 35px;
+    padding: 0 15px 15px;
+  }
+
+  .fa {
+    font-size: 24px;
+    color: grey;
+    margin-left: 13px;
+    margin-top: 12px;
+  }
+
+  li {
+    display: inline-block;
+    border-right: 1px solid #d9d9d9;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    margin-right: 10px;
+
+    &:last-child {
+      border-right: none;
+    }
+
+    a {
+      color: #666;
+      font-size: 14px;
+
+      &:hover {
+        text-decoration: none;
+        color: black;
+      }
     }
   }
 }
