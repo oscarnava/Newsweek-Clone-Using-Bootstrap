@@ -72,7 +72,9 @@ nav {
     justify-content: space-between;
     padding: 20px 10px 15px;
     background-color: #f72210;
-    height: 95px; }
+    height: 95px;
+    max-width: 1310px;
+    margin: 0 auto; }
     @media screen and (max-width: 992px) {
       nav .head-panel {
         height: 50px; } }
@@ -122,12 +124,17 @@ nav {
         content: "";
         border-top: 15px solid #f72210;
         border-left: 12px solid white; } }
+    @media screen and (min-width: 1310px) {
+      nav .head-panel::after {
+        display: none; } }
   nav .menu-panel {
     height: 56px;
     background-color: white;
     color: black;
     padding: 15px 50px 15px 0px;
-    border-bottom: 1px solid #ddd; }
+    border-bottom: 1px solid #ddd;
+    max-width: 1310px;
+    margin: 0 auto; }
     @media screen and (max-width: 1024.5px) {
       nav .menu-panel {
         display: none; } }
@@ -159,6 +166,8 @@ nav {
           color: #666; }
 
 main {
+  max-width: 1310px;
+  margin: 0px auto;
   padding-top: 161px; }
   @media screen and (max-width: 992px) {
     main {
