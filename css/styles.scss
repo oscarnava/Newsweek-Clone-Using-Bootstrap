@@ -657,6 +657,11 @@ h2 {
 }
 
 #newsletter {
+  padding-top: 40px;
+
+  .row {
+    height: 90%;
+  }
 
   h2 {
     color: $newsweek-red;
