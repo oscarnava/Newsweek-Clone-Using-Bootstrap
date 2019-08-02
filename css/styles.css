@@ -56,13 +56,105 @@ a {
   text-decoration: none; }
 
 nav {
-  height: 50px;
-  color: white;
-  background-color: #f72210; }
-  nav .nw-logo {
-    width: 236px;
-    height: 35px;
-    margin: 8px 8px; }
+  height: 95px;
+  padding: 0px; }
+  nav a:hover {
+    color: inherit;
+    text-decoration: none; }
+  nav .head-panel {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10px 15px;
+    background-color: #f72210;
+    height: 95px; }
+    @media screen and (max-width: 992px) {
+      nav .head-panel {
+        height: 50px; } }
+    nav .head-panel .date {
+      font: 16px "Roboto Condensed", sans-serif;
+      align-self: flex-end; }
+      @media screen and (max-width: 992px) {
+        nav .head-panel .date {
+          display: none; } }
+    nav .head-panel .logo {
+      align-self: flex-end; }
+      nav .head-panel .logo .nw-logo {
+        width: 414.6888519135px;
+        height: 63px;
+        align-self: flex-end; }
+        @media screen and (max-width: 992px) {
+          nav .head-panel .logo .nw-logo {
+            width: 131.6472545757px;
+            height: 20px; } }
+    nav .head-panel .signin {
+      font: bold 18px "Roboto Condensed", sans-serif;
+      align-self: flex-end; }
+      @media screen and (max-width: 992px) {
+        nav .head-panel .signin {
+          align-self: center; } }
+      nav .head-panel .signin .btn {
+        font: bold 18px "Roboto Condensed", sans-serif;
+        background-color: white;
+        color: #f72210;
+        margin-left: 10px;
+        padding: 2px 6px;
+        margin-bottom: 2px; }
+      nav .head-panel .signin .menu {
+        font-size: 24px;
+        color: rgba(255, 255, 255, 0.33);
+        margin-left: 20px; }
+        @media screen and (min-width: 992.5px) {
+          nav .head-panel .signin .menu {
+            display: none; } }
+    @media screen and (min-width: 992.5px) {
+      nav .head-panel::after {
+        position: absolute;
+        top: 95px;
+        right: 0px;
+        display: inline-block;
+        width: 66px;
+        content: "";
+        border-top: 15px solid #f72210;
+        border-left: 12px solid white; } }
+  nav .menu-panel {
+    height: 56px;
+    background-color: white;
+    color: black;
+    padding: 15px 50px 15px 0px;
+    border-bottom: 1px solid #ddd; }
+    @media screen and (max-width: 1024.5px) {
+      nav .menu-panel {
+        display: none; } }
+    nav .menu-panel ul {
+      display: flex;
+      justify-content: space-between; }
+      nav .menu-panel ul li {
+        border-right: 1px solid #ddd;
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        nav .menu-panel ul li:last-child {
+          border-right: none; }
+        nav .menu-panel ul li a {
+          font: bold 21px "Roboto Condensed", sans-serif;
+          display: inline-block;
+          color: black; }
+          nav .menu-panel ul li a:hover {
+            text-decoration: none;
+            color: #f72210; }
+        nav .menu-panel ul li.search input {
+          font-size: 16px;
+          width: 60px;
+          border: none; }
+        nav .menu-panel ul li.search i {
+          font-size: 18px;
+          font-weight: 100;
+          color: #666; }
+
+main {
+  padding-top: 161px; }
 
 h2 {
   color: rgba(3, 3, 3, 0.4);
