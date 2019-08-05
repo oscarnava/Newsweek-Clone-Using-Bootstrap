@@ -1,0 +1,49 @@
+// Global parameters
+
+$main-margin: 15px;
+$nav-head-height: 95px;
+$nav-head-height-sm: 50px;
+$nav-menu-height: 56px;
+
+$newsweek-red: #f72210;
+$small-logo-size: 28px;
+$logo-scale: 6.5823627287853577371048252911814;
+
+$default-font: 13px Arial, Helvetica, sans-serif;
+
+$titles-font-family: 'Roboto Condensed', sans-serif;
+
+$nav-date-font: 16px $titles-font-family;
+$nav-sign-font: bold 18px $titles-font-family;
+$nav-menu-font: bold 21px $titles-font-family;
+
+$corner-box-font: bold 17px $titles-font-family;
+$top-story-title-font: 17px $titles-font-family;
+$culture-font: Helvetica, Arial, sans-serif;
+$culture-title-font: 18px "Lora", serif;
+$more-stories-title-font: bold 17px $titles-font-family;
+$featured-stories-title-font: bold 20px $titles-font-family;
+$opinion-title-font: bold 17px $titles-font-family;
+$opinion-author-font: bold 14px $titles-font-family;
+$sponsored-title-font: bold 20px $titles-font-family;
+$mid-sign-up-title-font: bold 19px $titles-font-family;
+$features-title-font: bold 20px $titles-font-family;
+$editors-pick-title-font: bold 24px $titles-font-family;
+$slideshow-title-font: bold 22px $titles-font-family;
+$section-pick-title-font: bold 22px $titles-font-family;
+$section-pick-big-section-font: bold 22px $titles-font-family;
+$section-pick-small-section-font: bold 17px $titles-font-family;
+$subscribe-title-font: bold 24px $titles-font-family;
+$newsletter-title-font: bold 24px $titles-font-family;
+
+%default-font {
+  font: $default-font;
+}
+
+@mixin mark($color: #9200a5) {
+  border: 2px dashed transparentize($color, 0.5);
+  background-color: transparentize($color, 0.85);
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJyB3aWR0aD0nNicgaGVpZ2h0PSc2Jz4KICA8cmVjdCB3aWR0aD0nNicgaGVpZ2h0PSc2JyBmaWxsPScjZWVlZWVlJy8+CiAgPGcgaWQ9J2MnPgogICAgPHJlY3Qgd2lkdGg9JzMnIGhlaWdodD0nMycgZmlsbD0nI2U2ZTZlNicvPgogICAgPHJlY3QgeT0nMScgd2lkdGg9JzMnIGhlaWdodD0nMicgZmlsbD0nI2Q4ZDhkOCcvPgogIDwvZz4KICA8dXNlIHhsaW5rOmhyZWY9JyNjJyB4PSczJyB5PSczJy8+Cjwvc3ZnPg==");
+  background-repeat: repeat;
+  min-height: 10px;
+}
