@@ -22,8 +22,6 @@ nav {
     max-width: 1310px;
     margin: 0 auto;
 
-//    @extend %mark;
-
     @media screen and(max-width:992px) {
       height: $nav-head-height-sm;
     }
